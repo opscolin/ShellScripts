@@ -78,4 +78,12 @@ then
   level=$1
   file=$2
   LevelTwo
+else
+    echo "===================================================="
+    echo "Usage:"
+    echo -e "\t#convert Level one"
+    echo -e "\t`basename $0` LevelOne.xlsx > LevelOne.txt"
+    echo -e "\t#convert Level two"
+    echo -e "\t`basename $0` 2 LevelTwo.xlsx > LevelTwo.txt"
+    echo "===================================================="
 fi
