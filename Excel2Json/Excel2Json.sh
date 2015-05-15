@@ -31,6 +31,7 @@ LevelOne(){
 
 LevelTwo(){
     echo "["
+    number=`cat ${file}|sed 's/"//g'|awk -F ','  'BEGIN{OFS=","}{print $1,$2}'|uniq -c|awk 'BEGIN{OFS=","}{print $1,$2}'|wc -l`
     for line in `cat ${file}|sed 's/"//g'|awk -F ','  'BEGIN{OFS=","}{print $1,$2}'|uniq -c|awk 'BEGIN{OFS=","}{print $1,$2}'`
     do
         a0=`echo ${line}|awk -F ',' '{print $1}'`
@@ -63,7 +64,12 @@ LevelTwo(){
                 let i=$(($i + 1))
             done
             echo -e "\t\t]"
-            echo -e "\t},"
+            if [ ${a1} -eq ${number} ]
+            then
+                echo -e "\t}"
+            else
+                echo -e "\t},"
+            fi
         fi
     done
     echo "]"
