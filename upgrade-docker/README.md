@@ -2,10 +2,10 @@
 
 ## introduction
 
-  If docker service is up, try to stop it first 
-  then backup older to /usr/bin/dokcer.`date +%Y%m%d`
-  after upgrade try to start docker serivce 
-  and try to execute `dokcer version` to confirm
+    If docker service is up, try to stop it first 
+    then backup older to /usr/bin/dokcer.`date +%Y%m%d`
+    after upgrade try to start docker serivce 
+    and try to execute `dokcer version` to confirm
   
   
 ## e.g.
