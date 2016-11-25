@@ -26,17 +26,17 @@
 ---  
 ## upgrade-docker
   
-  Usage:
-    bash upgrade_docker.sh
+    Usage:
+        bash upgrade_docker.sh
 
-  Description:
-    Centos下 docker 自动升级脚本    
+    Description:
+        Centos下 docker 自动升级脚本    
     
 ---
 ## addUserWithSudo
 
-  Usage:
-    bash addUserWithSudo.sh username [password]
-    
-  Description:
-    Centos下添加普通账号同时赋予 sudo 权限
+    Usage:
+      bash addUserWithSudo.sh username [password]
+
+    Description:
+      Centos下添加普通账号同时赋予 sudo 权限
