@@ -35,12 +35,12 @@
     		
     		
 ## check if add
-root@pts/2 $ cat /etc/passwd |grep james 
-james:x:1001:1001::/home/james:/bin/bash
+    root@pts/2 $ cat /etc/passwd |grep james 
+    james:x:1001:1001::/home/james:/bin/bash
 
 ## check if grant the sudo privilege
-root@pts/1 $ cat /etc/sudoers.d/custom |grep james 
-james	ALL=(ALL)	ALL
+    root@pts/1 $ cat /etc/sudoers.d/custom |grep james 
+    james	ALL=(ALL)	ALL
 
 ## verify the sudo privilege
     root@pts/1 $ su - james 
