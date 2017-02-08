@@ -40,3 +40,20 @@
 
     Description:
       Centos下添加普通账号同时赋予 sudo 权限
+
+---
+## install_redis
+
+	Usage:
+		bash install_redis.sh [version]
+			here version is the parameter which control the redis version you want to install 
+		bash init_redis.sh
+			init redis config file and start script which run redis serivice by redis user
+
+	Description:
+		Linux下自动化安装redis服务。特点如下：
+		1、支持一个参数自定义安装脚本 
+		2、初始化一个配置文件和redis服务启动停止脚本，该脚本用redis用户启动服务而非root用户
+
+		注意：
+			如果修改了redis的安装路径，请确保配置文件和启动脚本中对话的参数也作相应的修改。
