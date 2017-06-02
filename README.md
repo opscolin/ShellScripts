@@ -57,3 +57,21 @@
 
 		注意：
 			如果修改了redis的安装路径，请确保配置文件和启动脚本中对话的参数也作相应的修改。
+
+---
+## buildSSHtunnel
+	
+	Usage:
+
+		bash build_ssh_tunnel.sh 
+	
+	Description:
+
+		默认设置在和该脚本同级的目录下有个 `hostip_passwd.conf` 配置文件，保存远程主机的IP地址和密码，格式如下;
+		
+		192.168.100.2 passwd2
+		192.168.100.3 passwd3
+		...
+		
+
+		build_ssh_tunnel.sh 脚本中 `publicKey`变量请配置成实际自己的运维管理主机的公钥
