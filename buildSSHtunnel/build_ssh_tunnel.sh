@@ -9,6 +9,22 @@
 
 #source /devOps/shell/common/functions
 
+
+## 写在最前面的初始化
+## 避免对于首次连接远程主机需要需要`yes` 更新known_hosts文件的情况
+sshconfig="$HOME/.ssh/config"
+
+if [[ ! -f ${sshconfig} ]]; then
+	touch ${sshconfig}
+elif [[ $(grep  -c 'StrictHostKeyChecking' ${sshconfig}) -eq 0 ]]; then
+	sed -i '$aStrictHostKeyChecking no' ${sshconfig}
+elif [[ $(grep -c 'UserKnownHostsFile' ${sshconfig}) -eq 0 ]]; then
+	sed -i '$aUserKnownHostsFile /dev/null' ${sshconfig}
+else
+	echo "Already init. Nothing to d!"
+fi
+
+
 ## 运维主机的公钥
 publicKey='xxxxxxxxxxxxxxxxx'
 
